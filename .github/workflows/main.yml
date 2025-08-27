@@ -9,7 +9,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-
+env:
+  user_name: "Gilles"
 # A workflow is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -24,7 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, $user_name!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
